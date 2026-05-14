@@ -40,7 +40,7 @@ export default function History() {
           onClick={clearAll}
           style={{ color: '#ef4444', borderColor: '#fca5a5', fontSize: '0.85rem' }}
         >
-          🗑 Hapus Semua
+          Hapus Semua
         </button>
       </div>
 
