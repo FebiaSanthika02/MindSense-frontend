@@ -164,10 +164,10 @@ export default function Home() {
       {/* ── Features ─────────────────────────────────────── */}
       <section style={{ maxWidth: 1100, margin: '0 auto', padding: '3.5rem 1.5rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#1a2e1a', marginBottom: '0.5rem' }}>
+          <h2 style={{ fontSize: 'clamp(1.3rem, 5vw, 1.75rem)', fontWeight: 800, color: '#1a2e1a', marginBottom: '0.5rem', lineHeight: 1.3 }}>
             Apa yang bisa MindSense lakukan?
           </h2>
-          <p style={{ color: '#7a9a7a', fontSize: '0.95rem' }}>
+          <p style={{ color: '#7a9a7a', fontSize: 'clamp(0.85rem, 3vw, 0.95rem)' }}>
             Teknologi cerdas untuk mendukung kesehatan mentalmu
           </p>
         </div>
