@@ -175,7 +175,7 @@ export default function Analyze({ apiStatus }) {
               Respons Suportif
             </h3>
             {result.supportive_response.split('\n').filter(l => l.trim()).map((line, i) => (
-              <p key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.75, color: '#3d5a3d' }}>{line}</p>
+              <p key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.75, color: '#3d5a3d', fontSize: 'clamp(0.85rem, 3.5vw, 0.95rem)' }}>{line}</p>
             ))}
           </div>
 
@@ -198,7 +198,7 @@ export default function Analyze({ apiStatus }) {
               color: '#5a7a5a', fontStyle: 'italic', lineHeight: 1.75,
               padding: '0.75rem 1rem', background: '#f0f9f0',
               borderRadius: 10, borderLeft: '3px solid #5bb85b',
-              marginBottom: '1rem'
+              marginBottom: '1rem', fontSize: 'clamp(0.85rem, 3.5vw, 0.95rem)'
             }}>
               {result.journaling_prompt}
             </p>
