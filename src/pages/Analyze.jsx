@@ -114,7 +114,6 @@ export default function Analyze({ apiStatus }) {
             className="btn btn-primary"
             onClick={handleAnalyze}
             disabled={loading || text.trim().length < 3 || apiStatus === 'offline'}
-            style={{ padding: '0.7rem 1.75rem' }}
           >
             {loading
               ? <><span className="spinner" /> Menganalisis...</>
@@ -126,14 +125,14 @@ export default function Analyze({ apiStatus }) {
       {/* ── API offline warning ──────────────────────── */}
       {apiStatus === 'offline' && (
         <div className="card card-sm" style={{ borderColor: '#fca5a5', background: '#fef2f2', color: '#b91c1c', marginBottom: '1rem', fontSize: '0.88rem' }}>
-          ⚠️ Sistem sedang mengalami gangguan. Mohon coba beberapa saat lagi.
+          Sistem sedang mengalami gangguan. Mohon coba beberapa saat lagi.
         </div>
       )}
 
       {/* ── Error ───────────────────────────────────── */}
       {error && (
         <div className="card card-sm" style={{ borderColor: '#fca5a5', background: '#fef2f2', color: '#b91c1c', marginBottom: '1rem', fontSize: '0.88rem' }}>
-          ❌ {error}
+          {error}
         </div>
       )}
 
@@ -164,9 +163,9 @@ export default function Analyze({ apiStatus }) {
           {/* Crisis banner */}
           {result.urgency === 'crisis' && (
             <div className="crisis-alert" style={{ marginBottom: '1.25rem' }}>
-              ⚠️ <strong>Butuh bantuan segera?</strong><br />
+              <strong>Butuh bantuan segera?</strong><br />
               Hubungi <strong>Hotline 119</strong> (Indonesia, 24 jam gratis) atau{' '}
-              <strong>Into The Light: 021-7884-5555</strong>. Kamu tidak sendirian 💙
+              <strong>Into The Light: 021-7884-5555</strong>. Kamu tidak sendirian
             </div>
           )}
 

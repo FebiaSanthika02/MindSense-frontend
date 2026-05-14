@@ -66,8 +66,10 @@ export default function App() {
             <Route path="/tips" element={<Tips />} />
           </Routes>
         </main>
-        <footer className="footer">
-          <p>© 2026 MindSense &nbsp;·&nbsp; Butuh bantuan? Hubungi <strong>119</strong> (24 jam)</p>
+        <footer className="footer" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem' }}>
+          <span>© 2026 MindSense</span>
+          <span className="footer-separator">·</span>
+          <span>Butuh bantuan? Hubungi <strong>119</strong> (24 jam)</span>
         </footer>
       </div>
     </BrowserRouter>
