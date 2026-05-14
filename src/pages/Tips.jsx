@@ -15,14 +15,14 @@ export default function Tips() {
       {/* Header */}
       <div style={{
         background: 'linear-gradient(160deg, #f0f9f0, #e8f5e8)',
-        padding: '3rem 1.5rem 2.5rem',
+        padding: 'clamp(2rem, 5vw, 3rem) 1.5rem clamp(1.5rem, 4vw, 2.5rem)',
         textAlign: 'center',
       }}>
-        <div style={{ fontSize: '2.75rem', marginBottom: '0.75rem' }}>💚</div>
-        <h1 style={{ fontSize: '2rem', fontWeight: 800, color: '#1a2e1a', marginBottom: '0.5rem' }}>
+        <div style={{ fontSize: 'clamp(2rem, 6vw, 2.75rem)', marginBottom: '0.75rem' }}>💚</div>
+        <h1 style={{ fontSize: 'clamp(1.5rem, 6vw, 2rem)', fontWeight: 800, color: '#1a2e1a', marginBottom: '0.5rem' }}>
           Tips Kesehatan Mental
         </h1>
-        <p style={{ color: '#7a9a7a', maxWidth: 480, margin: '0 auto', fontSize: '0.95rem' }}>
+        <p style={{ color: '#7a9a7a', maxWidth: 480, margin: '0 auto', fontSize: 'clamp(0.85rem, 3.5vw, 0.95rem)' }}>
           Teknik berbasis ilmu pengetahuan untuk menjaga kesejahteraan mentalmu sehari-hari.
         </p>
       </div>

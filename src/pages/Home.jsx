@@ -162,12 +162,12 @@ export default function Home() {
       </div>
 
       {/* ── Features ─────────────────────────────────────── */}
-      <section style={{ maxWidth: 1100, margin: '0 auto', padding: '3.5rem 1.5rem' }}>
-        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <h2 style={{ fontSize: 'clamp(1.3rem, 5vw, 1.75rem)', fontWeight: 800, color: '#1a2e1a', marginBottom: '0.5rem', lineHeight: 1.3 }}>
+      <section style={{ maxWidth: 1100, margin: '0 auto', padding: 'clamp(2rem, 5vw, 3.5rem) 1.5rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
+          <h2 style={{ fontSize: 'clamp(1.15rem, 5vw, 1.75rem)', fontWeight: 800, color: '#1a2e1a', marginBottom: '0.5rem', lineHeight: 1.3 }}>
             Apa yang bisa MindSense lakukan?
           </h2>
-          <p style={{ color: '#7a9a7a', fontSize: 'clamp(0.85rem, 3vw, 0.95rem)' }}>
+          <p style={{ color: '#7a9a7a', fontSize: 'clamp(0.85rem, 3.5vw, 0.95rem)', maxWidth: '400px', margin: '0 auto' }}>
             Teknologi cerdas untuk mendukung kesehatan mentalmu
           </p>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section style={{ padding: '0 1.5rem 4rem' }}>
+      <section style={{ padding: '0 1.5rem clamp(2.5rem, 6vw, 4rem)' }}>
         <div style={{
           maxWidth: 700, margin: '0 auto', textAlign: 'center',
           background: 'linear-gradient(135deg, #1a2e1a, #2d4a2d)',
