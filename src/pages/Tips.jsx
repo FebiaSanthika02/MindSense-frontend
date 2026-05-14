@@ -71,9 +71,9 @@ export default function Tips() {
         }}>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
             <div>
-              <h3 style={{ fontWeight: 800, color: '#a8d4a8', marginBottom: '0.5rem' }}>Butuh Bantuan Segera?</h3>
-              <p style={{ color: '#7aaa7a', fontSize: '0.9rem', lineHeight: 1.8 }}>
-                <strong style={{ color: '#c8e8c8' }}>Hotline Kesehatan Jiwa: 119 ext 8</strong> — 24 jam, gratis<br />
+              <h3 style={{ fontWeight: 800, color: '#a8d4a8', marginBottom: '0.5rem', fontSize: 'clamp(1.1rem, 5vw, 1.4rem)' }}>Butuh Bantuan Segera?</h3>
+              <p style={{ color: '#7aaa7a', fontSize: 'clamp(0.85rem, 3.5vw, 0.95rem)', lineHeight: 1.8, wordBreak: 'break-word' }}>
+                <strong style={{ color: '#c8e8c8' }}>Hotline Kesehatan Jiwa: 119 ext 8</strong> <span style={{ whiteSpace: 'nowrap' }}>— 24 jam, gratis</span><br />
                 <strong style={{ color: '#c8e8c8' }}>Into The Light: 021-7884-5555</strong><br />
                 <strong style={{ color: '#c8e8c8' }}>Yayasan Pulih: 021-788-42580</strong>
               </p>
