@@ -82,7 +82,12 @@ export default function Home() {
               <p style={{ fontSize: '0.8rem', color: '#7a9a7a', marginBottom: '0.6rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                 Bagaimana perasaanmu hari ini?
               </p>
-              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+              <div style={{ 
+                display: 'flex', gap: '0.5rem', flexWrap: 'nowrap', 
+                overflowX: 'auto', paddingBottom: '0.5rem',
+                scrollbarWidth: 'none', msOverflowStyle: 'none'
+              }}>
+                <style>{`.mood-scroll::-webkit-scrollbar { display: none; }`}</style>
                 {MOOD_OPTIONS.map(m => (
                   <Link key={m} to="/analyze" style={{
                     padding: '0.45rem 1rem',
@@ -94,6 +99,8 @@ export default function Home() {
                     textDecoration: 'none',
                     transition: 'all 0.2s',
                     fontWeight: 500,
+                    whiteSpace: 'nowrap',
+                    flexShrink: 0
                   }}
                     onMouseEnter={e => { e.currentTarget.style.borderColor = '#5bb85b'; e.currentTarget.style.background = '#f0f9f0'; }}
                     onMouseLeave={e => { e.currentTarget.style.borderColor = '#d4e8d4'; e.currentTarget.style.background = 'white'; }}

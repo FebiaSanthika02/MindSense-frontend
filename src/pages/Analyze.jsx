@@ -18,12 +18,14 @@ export default function Analyze({ apiStatus }) {
   const [result, setResult]   = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState('');
+  const [journal, setJournal] = useState('');
 
   const handleAnalyze = async () => {
     if (text.trim().length < 3) return;
     setLoading(true);
     setError('');
     setResult(null);
+    setJournal('');
     try {
       const data = await api.analyze(text.trim());
       setResult(data);
@@ -48,7 +50,8 @@ export default function Analyze({ apiStatus }) {
       + `- Urgensi: ${result.urgency} (${Math.round(result.urgency_confidence*100)}%)\n\n`
       + `RESPONS:\n${result.supportive_response}\n\n`
       + `SARAN:\n${result.coping_suggestions.map(s=>'• '+s).join('\n')}\n\n`
-      + `JOURNALING:\n${result.journaling_prompt}`;
+      + `JOURNALING PROMPT:\n${result.journaling_prompt}\n\n`
+      + `ISI JURNAL SAYA:\n${journal || '(Belum diisi)'}`;
     const a = Object.assign(document.createElement('a'), {
       href: URL.createObjectURL(new Blob([txt], { type: 'text/plain' })),
       download: `mindsense-${new Date().toISOString().split('T')[0]}.txt`,
@@ -198,9 +201,21 @@ export default function Analyze({ apiStatus }) {
               color: '#5a7a5a', fontStyle: 'italic', lineHeight: 1.75,
               padding: '0.75rem 1rem', background: '#f0f9f0',
               borderRadius: 10, borderLeft: '3px solid #5bb85b',
+              marginBottom: '1rem'
             }}>
               {result.journaling_prompt}
             </p>
+            <textarea
+              rows={4}
+              placeholder="Tulis refleksi jurnalmu di sini..."
+              value={journal}
+              onChange={e => setJournal(e.target.value)}
+            />
+            {journal.length > 0 && (
+              <div style={{ marginTop: '0.5rem', textAlign: 'right', fontSize: '0.8rem', color: '#7a9a7a' }}>
+                Jurnalmu akan ikut terunduh jika kamu menekan tombol Unduh Hasil Analisis di bawah.
+              </div>
+            )}
           </div>
 
           <button className="btn btn-ghost" onClick={handleExport}>
