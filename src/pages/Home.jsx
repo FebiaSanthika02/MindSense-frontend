@@ -32,10 +32,10 @@ export default function Home() {
         <div style={{
           maxWidth: 1100, margin: '0 auto',
           display: 'flex', alignItems: 'center', gap: '3rem',
-          flexWrap: 'wrap',
+          flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'
         }}>
           {/* Text */}
-          <div style={{ flex: '1 1 320px' }} className="fade-up">
+          <div style={{ flex: '1 1 300px', zIndex: 1, maxWidth: '100%' }} className="fade-up">
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
               padding: '0.35rem 1rem', borderRadius: '99px',
@@ -49,29 +49,30 @@ export default function Home() {
             </div>
 
             <h1 style={{
-              fontSize: 'clamp(2.2rem, 5vw, 3.2rem)',
+              fontSize: 'clamp(2rem, 8vw, 3.2rem)',
               fontWeight: 800,
               lineHeight: 1.15,
               color: '#1a2e1a',
               marginBottom: '1.25rem',
+              wordBreak: 'break-word',
             }}>
               Take a breath.<br />
               <span style={{ color: '#3fa33f' }}>You're in a safe space.</span>
             </h1>
 
             <p style={{
-              fontSize: '1.05rem', color: '#5a7a5a',
-              maxWidth: 480, lineHeight: 1.75, marginBottom: '2rem',
+              fontSize: '1rem', color: '#5a7a5a',
+              maxWidth: 480, lineHeight: 1.6, marginBottom: '2rem',
             }}>
               Platform cerdas bilingual untuk memahami emosimu, mengenali kondisi mental,
               dan mendapat dukungan yang kamu butuhkan — kapan saja.
             </p>
 
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
-              <Link to="/analyze" className="btn btn-primary" style={{ fontSize: '0.95rem' }}>
+              <Link to="/analyze" className="btn btn-primary" style={{ fontSize: '0.95rem', flex: '1 1 auto', textAlign: 'center' }}>
                 Mulai Sekarang
               </Link>
-              <Link to="/tips" className="btn btn-outline-green" style={{ fontSize: '0.9rem' }}>
+              <Link to="/tips" className="btn btn-outline-green" style={{ fontSize: '0.9rem', flex: '1 1 auto', textAlign: 'center' }}>
                 Pelajari Tips →
               </Link>
             </div>
@@ -105,12 +106,12 @@ export default function Home() {
           </div>
 
           {/* Mascot */}
-          <div style={{ flex: '0 0 auto', textAlign: 'center' }} className="fade-up">
+          <div style={{ flex: '1 1 300px', textAlign: 'center', zIndex: 1, marginTop: '1rem', maxWidth: '100%' }} className="fade-up">
             <img
               src="/mascot.png"
               alt="MindSense mascot"
               className="mascot-float"
-              style={{ width: 260, height: 260, objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(60,120,60,0.2))', mixBlendMode: 'multiply' }}
+              style={{ width: '100%', maxWidth: 260, height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(60,120,60,0.2))', mixBlendMode: 'multiply', margin: '0 auto' }}
             />
             <div style={{
               marginTop: '1rem',
@@ -123,6 +124,7 @@ export default function Home() {
               fontSize: '0.88rem',
               color: '#3d5a3d',
               fontWeight: 500,
+              maxWidth: '90%',
             }}>
               💚 Aku di sini untukmu
             </div>
