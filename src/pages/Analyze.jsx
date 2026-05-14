@@ -212,7 +212,7 @@ export default function Analyze({ apiStatus }) {
               onChange={e => setJournal(e.target.value)}
             />
             {journal.length > 0 && (
-              <div style={{ marginTop: '0.5rem', textAlign: 'right', fontSize: '0.8rem', color: '#7a9a7a' }}>
+              <div style={{ marginTop: '0.5rem', textAlign: 'center', fontSize: '0.8rem', color: '#7a9a7a' }}>
                 Jurnalmu akan ikut terunduh jika kamu menekan tombol Unduh Hasil Analisis di bawah.
               </div>
             )}
