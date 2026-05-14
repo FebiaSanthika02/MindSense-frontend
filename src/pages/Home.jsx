@@ -199,17 +199,17 @@ export default function Home() {
         <div style={{
           maxWidth: 700, margin: '0 auto', textAlign: 'center',
           background: 'linear-gradient(135deg, #1a2e1a, #2d4a2d)',
-          borderRadius: 28, padding: '3rem 2rem',
+          borderRadius: 28, padding: 'clamp(2rem, 6vw, 3rem) clamp(1.25rem, 4vw, 2rem)',
           boxShadow: '0 20px 60px rgba(26,46,26,0.25)',
         }}>
-          <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🌱</div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: 'white', marginBottom: '0.75rem' }}>
+          <div style={{ fontSize: 'clamp(2.5rem, 6vw, 3rem)', marginBottom: '1rem' }}>🌱</div>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 1.8rem)', fontWeight: 800, color: 'white', marginBottom: '0.75rem', lineHeight: 1.3 }}>
             Mulai perjalanan mentalmu hari ini
           </h2>
-          <p style={{ color: '#a8c4a8', marginBottom: '2rem', fontSize: '0.95rem' }}>
+          <p style={{ color: '#a8c4a8', marginBottom: '2rem', fontSize: 'clamp(0.85rem, 3vw, 0.95rem)', padding: '0 0.5rem' }}>
             Gratis, bilingual, dan tidak ada data yang disimpan.
           </p>
-          <Link to="/analyze" className="btn btn-green" style={{ fontSize: '1rem', padding: '0.9rem 2.5rem' }}>
+          <Link to="/analyze" className="btn btn-green" style={{ width: '100%', maxWidth: '280px' }}>
             Coba Sekarang — Gratis
           </Link>
         </div>
