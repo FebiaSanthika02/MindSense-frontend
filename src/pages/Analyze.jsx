@@ -2,22 +2,22 @@ import { useState } from 'react';
 import ResultCard from '../components/ResultCard';
 import api from '../hooks/useApi';
 
-const EMOTION_EMOJI = { joy:'😊', sadness:'😢', anger:'😠', fear:'😨', disgust:'🤢', surprise:'😲', neutral:'😐' };
-const MENTAL_EMOJI  = { stress:'😤', anxiety:'😰', burnout:'🥵', depression:'😞', loneliness:'🥺', normal:'✨' };
+const EMOTION_EMOJI = { joy: '😊', sadness: '😢', anger: '😠', fear: '😨', disgust: '🤢', surprise: '😲', neutral: '😐' };
+const MENTAL_EMOJI = { stress: '😤', anxiety: '😰', burnout: '🥵', depression: '😞', loneliness: '🥺', normal: '✨' };
 
 const MOOD_CHIPS = [
-  { label: 'Cemas / Anxious',   text: 'Saya merasa sangat cemas dan khawatir tentang banyak hal. Tidak bisa berhenti memikirkannya.' },
-  { label: 'Stres Kerja',        text: 'Pekerjaan sangat menekan akhir-akhir ini. Saya merasa overwhelmed dan tidak tahu harus mulai dari mana.' },
-  { label: 'Merasa Sedih',       text: 'Saya merasa sangat sedih dan tidak tahu kenapa. Rasanya hampa dan tidak bersemangat.' },
-  { label: 'Kelelahan',          text: 'Saya sudah sangat kelelahan, burnout. Tidak ada energi sama sekali meskipun sudah istirahat.' },
-  { label: 'Baik-Baik Saja',    text: 'Hari ini cukup baik. Saya merasa lebih tenang dan bersyukur.' },
+  { label: 'Cemas / Anxious', text: 'Saya merasa sangat cemas dan khawatir tentang banyak hal. Tidak bisa berhenti memikirkannya.' },
+  { label: 'Stres Kerja', text: 'Pekerjaan sangat menekan akhir-akhir ini. Saya merasa overwhelmed dan tidak tahu harus mulai dari mana.' },
+  { label: 'Merasa Sedih', text: 'Saya merasa sangat sedih dan tidak tahu kenapa. Rasanya hampa dan tidak bersemangat.' },
+  { label: 'Kelelahan', text: 'Saya sudah sangat kelelahan, burnout. Tidak ada energi sama sekali meskipun sudah istirahat.' },
+  { label: 'Baik-Baik Saja', text: 'Hari ini cukup baik. Saya merasa lebih tenang dan bersyukur.' },
 ];
 
 export default function Analyze({ apiStatus }) {
-  const [text, setText]       = useState('');
-  const [result, setResult]   = useState(null);
+  const [text, setText] = useState('');
+  const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError]     = useState('');
+  const [error, setError] = useState('');
   const [journal, setJournal] = useState('');
 
   const handleAnalyze = async () => {
@@ -45,11 +45,11 @@ export default function Analyze({ apiStatus }) {
       + `Waktu: ${new Date().toLocaleString('id-ID')}\n\n`
       + `INPUT:\n${result.text}\n\n`
       + `HASIL:\n`
-      + `- Emosi: ${result.emotion} (${Math.round(result.emotion_confidence*100)}%)\n`
-      + `- Kondisi: ${result.mental_state} (${Math.round(result.mental_confidence*100)}%)\n`
-      + `- Urgensi: ${result.urgency} (${Math.round(result.urgency_confidence*100)}%)\n\n`
+      + `- Emosi: ${result.emotion} (${Math.round(result.emotion_confidence * 100)}%)\n`
+      + `- Kondisi: ${result.mental_state} (${Math.round(result.mental_confidence * 100)}%)\n`
+      + `- Urgensi: ${result.urgency} (${Math.round(result.urgency_confidence * 100)}%)\n\n`
       + `RESPONS:\n${result.supportive_response}\n\n`
-      + `SARAN:\n${result.coping_suggestions.map(s=>'• '+s).join('\n')}\n\n`
+      + `SARAN:\n${result.coping_suggestions.map(s => '• ' + s).join('\n')}\n\n`
       + `JOURNALING PROMPT:\n${result.journaling_prompt}\n\n`
       + `ISI JURNAL SAYA:\n${journal || '(Belum diisi)'}`;
     const a = Object.assign(document.createElement('a'), {
@@ -213,7 +213,7 @@ export default function Analyze({ apiStatus }) {
             />
             {journal.length > 0 && (
               <div style={{ marginTop: '0.5rem', textAlign: 'center', fontSize: '0.8rem', color: '#7a9a7a' }}>
-                Jurnalmu akan ikut terunduh jika kamu menekan tombol Unduh Hasil Analisis di bawah.
+                Jurnal otomatis disertakan saat mengunduh hasil.
               </div>
             )}
           </div>
