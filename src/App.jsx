@@ -67,7 +67,7 @@ export default function App() {
           </Routes>
         </main>
         <footer className="footer">
-          <p>© 2026 MindSense &nbsp;·&nbsp; Butuh bantuan? Hubungi <strong>119 ext 8</strong> (24 jam)</p>
+          <p>© 2026 MindSense &nbsp;·&nbsp; Butuh bantuan? Hubungi <strong>119</strong> (24 jam)</p>
         </footer>
       </div>
     </BrowserRouter>

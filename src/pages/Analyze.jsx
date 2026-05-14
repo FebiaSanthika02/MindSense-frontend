@@ -6,11 +6,11 @@ const EMOTION_EMOJI = { joy:'😊', sadness:'😢', anger:'😠', fear:'😨', d
 const MENTAL_EMOJI  = { stress:'😤', anxiety:'😰', burnout:'🥵', depression:'😞', loneliness:'🥺', normal:'✨' };
 
 const MOOD_CHIPS = [
-  { label: '😰 Cemas / Anxious',   text: 'Saya merasa sangat cemas dan khawatir tentang banyak hal. Tidak bisa berhenti memikirkannya.' },
-  { label: '😤 Stres Kerja',        text: 'Pekerjaan sangat menekan akhir-akhir ini. Saya merasa overwhelmed dan tidak tahu harus mulai dari mana.' },
-  { label: '😞 Merasa Sedih',       text: 'Saya merasa sangat sedih dan tidak tahu kenapa. Rasanya hampa dan tidak bersemangat.' },
-  { label: '🥵 Kelelahan',          text: 'Saya sudah sangat kelelahan, burnout. Tidak ada energi sama sekali meskipun sudah istirahat.' },
-  { label: '😊 Baik-Baik Saja',    text: 'Hari ini cukup baik. Saya merasa lebih tenang dan bersyukur.' },
+  { label: 'Cemas / Anxious',   text: 'Saya merasa sangat cemas dan khawatir tentang banyak hal. Tidak bisa berhenti memikirkannya.' },
+  { label: 'Stres Kerja',        text: 'Pekerjaan sangat menekan akhir-akhir ini. Saya merasa overwhelmed dan tidak tahu harus mulai dari mana.' },
+  { label: 'Merasa Sedih',       text: 'Saya merasa sangat sedih dan tidak tahu kenapa. Rasanya hampa dan tidak bersemangat.' },
+  { label: 'Kelelahan',          text: 'Saya sudah sangat kelelahan, burnout. Tidak ada energi sama sekali meskipun sudah istirahat.' },
+  { label: 'Baik-Baik Saja',    text: 'Hari ini cukup baik. Saya merasa lebih tenang dan bersyukur.' },
 ];
 
 export default function Analyze({ apiStatus }) {
@@ -70,11 +70,11 @@ export default function Analyze({ apiStatus }) {
       </div>
 
       {/* ── Mood chips ──────────────────────────────── */}
-      <div style={{ marginBottom: '1.25rem' }}>
+      <div style={{ marginBottom: '1.25rem', textAlign: 'center' }}>
         <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#7a9a7a', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '0.6rem' }}>
           Pilih suasana hati:
         </p>
-        <div className="mood-chips">
+        <div className="mood-chips" style={{ justifyContent: 'center' }}>
           {MOOD_CHIPS.map(m => (
             <button
               key={m.label}
@@ -90,7 +90,7 @@ export default function Analyze({ apiStatus }) {
       {/* ── Input card ──────────────────────────────── */}
       <div className="card" style={{ marginBottom: '1rem' }}>
         <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, color: '#5a7a5a', marginBottom: '0.6rem' }}>
-          ✍️ Tulis perasaanmu:
+          Tulis perasaanmu:
         </label>
         <textarea
           rows={5}
@@ -105,7 +105,7 @@ export default function Analyze({ apiStatus }) {
           marginTop: '1rem', flexWrap: 'wrap', gap: '0.5rem',
         }}>
           <span style={{ fontSize: '0.78rem', color: '#a8c4a8' }}>
-            {text.length}/5000 karakter · <kbd style={{ background: '#f0f9f0', padding: '1px 5px', borderRadius: 4, border: '1px solid #d4e8d4', fontSize: '0.75rem' }}>Ctrl+Enter</kbd> untuk analisis
+            {text.length}/5000 karakter
           </span>
           <button
             className="btn btn-primary"
@@ -115,7 +115,7 @@ export default function Analyze({ apiStatus }) {
           >
             {loading
               ? <><span className="spinner" /> Menganalisis...</>
-              : '🔍 Analisis Sekarang'}
+              : 'Analisis Sekarang'}
           </button>
         </div>
       </div>
@@ -164,7 +164,7 @@ export default function Analyze({ apiStatus }) {
           {result.urgency === 'crisis' && (
             <div className="crisis-alert" style={{ marginBottom: '1.25rem' }}>
               ⚠️ <strong>Butuh bantuan segera?</strong><br />
-              Hubungi <strong>Hotline 119 ext 8</strong> (Indonesia, 24 jam gratis) atau{' '}
+              Hubungi <strong>Hotline 119</strong> (Indonesia, 24 jam gratis) atau{' '}
               <strong>Into The Light: 021-7884-5555</strong>. Kamu tidak sendirian 💙
             </div>
           )}
