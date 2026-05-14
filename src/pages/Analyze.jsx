@@ -144,19 +144,17 @@ export default function Analyze({ apiStatus }) {
           {/* Metric cards */}
           <div className="metrics-grid" style={{ marginBottom: '1.25rem' }}>
             <ResultCard
-              label="🎭 Emosi"
+              label="Emosi"
               value={result.emotion}
               confidence={result.emotion_confidence}
-              emoji={EMOTION_EMOJI[result.emotion]}
             />
             <ResultCard
-              label="🧠 Kondisi Mental"
+              label="Kondisi Mental"
               value={result.mental_state}
               confidence={result.mental_confidence}
-              emoji={MENTAL_EMOJI[result.mental_state]}
             />
             <ResultCard
-              label="⚡ Urgensi"
+              label="Urgensi"
               value={result.urgency}
               confidence={result.urgency_confidence}
               urgency
@@ -175,7 +173,7 @@ export default function Analyze({ apiStatus }) {
           {/* Supportive response */}
           <div className="card card-green" style={{ marginBottom: '1rem' }}>
             <h3 style={{ fontWeight: 700, color: '#2d8a2d', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{ fontSize: '1.2rem' }}>💬</span> Respons Suportif
+              Respons Suportif
             </h3>
             {result.supportive_response.split('\n').filter(l => l.trim()).map((line, i) => (
               <p key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.75, color: '#3d5a3d' }}>{line}</p>
@@ -185,7 +183,7 @@ export default function Analyze({ apiStatus }) {
           {/* Coping suggestions */}
           <div className="card" style={{ marginBottom: '1rem' }}>
             <h3 style={{ fontWeight: 700, color: '#1a2e1a', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{ fontSize: '1.2rem' }}>🛠️</span> Saran Coping
+              Saran Coping
             </h3>
             <ul className="suggestions-list">
               {result.coping_suggestions.map((s, i) => <li key={i}>{s}</li>)}
@@ -195,7 +193,7 @@ export default function Analyze({ apiStatus }) {
           {/* Journaling prompt */}
           <div className="card" style={{ marginBottom: '1.5rem' }}>
             <h3 style={{ fontWeight: 700, color: '#1a2e1a', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{ fontSize: '1.2rem' }}>📓</span> Journaling Prompt
+              Journaling Prompt
             </h3>
             <p style={{
               color: '#5a7a5a', fontStyle: 'italic', lineHeight: 1.75,
@@ -219,7 +217,7 @@ export default function Analyze({ apiStatus }) {
           </div>
 
           <button className="btn btn-ghost" onClick={handleExport}>
-            ⬇ Unduh Hasil Analisis
+            Unduh Hasil Analisis
           </button>
         </div>
       )}

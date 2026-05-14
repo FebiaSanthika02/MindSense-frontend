@@ -1,7 +1,7 @@
 /**
  * ResultCard — metric card untuk light theme
  */
-export default function ResultCard({ label, value, confidence, emoji, urgency }) {
+export default function ResultCard({ label, value, confidence, urgency }) {
   const pct = Math.round((confidence || 0) * 100);
 
   const urgencyColors = {
@@ -20,7 +20,6 @@ export default function ResultCard({ label, value, confidence, emoji, urgency })
       style={{ background: urgencyBg }}>
       <div className="metric-label">{label}</div>
       <div className="metric-value" style={{ color: valColor, fontSize: '1.25rem' }}>
-        {emoji && <span style={{ marginRight: '4px' }}>{emoji}</span>}
         {value ? value.charAt(0).toUpperCase() + value.slice(1) : '—'}
       </div>
       <div className="metric-conf">{pct}% confidence</div>

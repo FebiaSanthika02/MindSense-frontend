@@ -15,7 +15,7 @@ export default function Home() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section style={{
         background: 'linear-gradient(160deg, #f0f9f0 0%, #e8f5e8 50%, #f5fbf5 100%)',
-        padding: '4rem 1.5rem 5rem',
+        padding: 'clamp(2rem, 5vh, 4rem) 1.5rem clamp(2.5rem, 6vh, 5rem)',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -31,7 +31,7 @@ export default function Home() {
 
         <div style={{
           maxWidth: 1100, margin: '0 auto',
-          display: 'flex', alignItems: 'center', gap: '3rem',
+          display: 'flex', alignItems: 'center', gap: 'clamp(1.5rem, 4vw, 3rem)',
           flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'
         }}>
           {/* Text */}
@@ -49,11 +49,11 @@ export default function Home() {
             </div>
 
             <h1 style={{
-              fontSize: 'clamp(2rem, 8vw, 3.2rem)',
+              fontSize: 'clamp(1.8rem, 7vw, 3.2rem)',
               fontWeight: 800,
-              lineHeight: 1.15,
+              lineHeight: 1.3,
               color: '#1a2e1a',
-              marginBottom: '1.25rem',
+              marginBottom: '1rem',
               wordBreak: 'break-word',
             }}>
               Take a breath.<br />
@@ -61,8 +61,8 @@ export default function Home() {
             </h1>
 
             <p style={{
-              fontSize: '1rem', color: '#5a7a5a',
-              maxWidth: 480, lineHeight: 1.6, marginBottom: '2rem',
+              fontSize: 'clamp(0.9rem, 2.5vw, 1rem)', color: '#5a7a5a',
+              maxWidth: 480, lineHeight: 1.6, marginBottom: '1.5rem',
             }}>
               Platform cerdas bilingual untuk memahami emosimu, mengenali kondisi mental,
               dan mendapat dukungan yang kamu butuhkan — kapan saja.
@@ -118,7 +118,7 @@ export default function Home() {
               src="/mascot.png"
               alt="MindSense mascot"
               className="mascot-float"
-              style={{ width: '100%', maxWidth: 260, height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(60,120,60,0.2))', mixBlendMode: 'multiply', margin: '0 auto' }}
+              style={{ width: '100%', maxWidth: 220, height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(60,120,60,0.2))', mixBlendMode: 'multiply', margin: '0 auto' }}
             />
             <div style={{
               marginTop: '1rem',
@@ -210,7 +210,7 @@ export default function Home() {
             Gratis, bilingual, dan tidak ada data yang disimpan.
           </p>
           <Link to="/analyze" className="btn btn-green" style={{ fontSize: '1rem', padding: '0.9rem 2.5rem' }}>
-            Coba Sekarang — Gratis ✨
+            Coba Sekarang — Gratis
           </Link>
         </div>
       </section>
