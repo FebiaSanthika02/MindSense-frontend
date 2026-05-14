@@ -1,0 +1,11 @@
+# Pastikan file besar tidak ter-upload ke Vercel
+best_model/
+*.safetensors
+*.bin
+data/
+__pycache__/
+*.pyc
+.venv/
+venv/
+src/models/
+backend/
