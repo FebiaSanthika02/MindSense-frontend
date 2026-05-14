@@ -65,9 +65,9 @@ export default function Analyze({ apiStatus }) {
 
       {/* ── Page header ─────────────────────────────── */}
       <div style={{ textAlign: 'center', padding: '2rem 0 1.5rem' }}>
-        <div style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>🌿</div>
-        <h1 className="section-title">Ceritakan Perasaanmu</h1>
-        <p className="section-sub">
+        <div style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', marginBottom: '0.5rem' }}>🌿</div>
+        <h1 className="section-title" style={{ fontSize: 'clamp(1.5rem, 5vw, 2rem)', lineHeight: 1.3 }}>Ceritakan Perasaanmu</h1>
+        <p className="section-sub" style={{ fontSize: 'clamp(0.85rem, 3.5vw, 0.95rem)' }}>
           Tulis apa yang kamu rasakan — dalam Bahasa Indonesia atau Inggris.
         </p>
       </div>

@@ -32,8 +32,8 @@ export default function History() {
     <div className="container-sm">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.75rem', flexWrap: 'wrap', gap: '0.75rem', paddingTop: '1.5rem' }}>
         <div>
-          <h1 className="section-title">Riwayat Analisis 📋</h1>
-          <p className="section-sub" style={{ marginBottom: 0 }}>{history.length} entri tersimpan di browser</p>
+          <h1 className="section-title" style={{ fontSize: 'clamp(1.2rem, 5vw, 1.5rem)', lineHeight: 1.3 }}>Riwayat Analisis 📋</h1>
+          <p className="section-sub" style={{ marginBottom: 0, fontSize: 'clamp(0.85rem, 3.5vw, 0.95rem)' }}>{history.length} entri tersimpan di browser</p>
         </div>
         <button
           className="btn btn-ghost"

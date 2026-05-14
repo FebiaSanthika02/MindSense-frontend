@@ -162,12 +162,12 @@ export default function Home() {
       </div>
 
       {/* ── Features ─────────────────────────────────────── */}
-      <section style={{ maxWidth: 1100, margin: '0 auto', padding: 'clamp(2rem, 5vw, 3.5rem) 1.5rem' }}>
-        <div style={{ textAlign: 'center', marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
-          <h2 style={{ fontSize: 'clamp(1.15rem, 5vw, 1.75rem)', fontWeight: 800, color: '#1a2e1a', marginBottom: '0.5rem', lineHeight: 1.3 }}>
+      <section style={{ maxWidth: 1100, margin: '0 auto', padding: '3.5rem 1.5rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <h2 style={{ fontSize: 'clamp(1.3rem, 5vw, 1.75rem)', fontWeight: 800, color: '#1a2e1a', marginBottom: '0.5rem', lineHeight: 1.3 }}>
             Apa yang bisa MindSense lakukan?
           </h2>
-          <p style={{ color: '#7a9a7a', fontSize: 'clamp(0.85rem, 3.5vw, 0.95rem)', maxWidth: '400px', margin: '0 auto' }}>
+          <p style={{ color: '#7a9a7a', fontSize: 'clamp(0.85rem, 3vw, 0.95rem)' }}>
             Teknologi cerdas untuk mendukung kesehatan mentalmu
           </p>
         </div>
@@ -195,21 +195,22 @@ export default function Home() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section style={{ padding: '0 1.5rem clamp(2.5rem, 6vw, 4rem)' }}>
+      <section style={{ padding: '0 1.5rem 4rem' }}>
         <div style={{
           maxWidth: 700, margin: '0 auto', textAlign: 'center',
           background: 'linear-gradient(135deg, #1a2e1a, #2d4a2d)',
-          borderRadius: 28, padding: 'clamp(2rem, 6vw, 3rem) clamp(1.25rem, 4vw, 2rem)',
+          borderRadius: 28, padding: 'clamp(2.5rem, 6vw, 3.5rem) clamp(1.5rem, 5vw, 2.5rem)',
           boxShadow: '0 20px 60px rgba(26,46,26,0.25)',
+          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'
         }}>
-          <div style={{ fontSize: 'clamp(2.5rem, 6vw, 3rem)', marginBottom: '1rem' }}>🌱</div>
+          <div style={{ fontSize: 'clamp(2.5rem, 6vw, 3rem)', lineHeight: 1, marginBottom: '1rem' }}>🌱</div>
           <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 1.8rem)', fontWeight: 800, color: 'white', marginBottom: '0.75rem', lineHeight: 1.3 }}>
             Mulai perjalanan mentalmu hari ini
           </h2>
           <p style={{ color: '#a8c4a8', marginBottom: '2rem', fontSize: 'clamp(0.85rem, 3vw, 0.95rem)', padding: '0 0.5rem' }}>
             Gratis, bilingual, dan tidak ada data yang disimpan.
           </p>
-          <Link to="/analyze" className="btn btn-green" style={{ width: '100%', maxWidth: '280px' }}>
+          <Link to="/analyze" className="btn btn-green" style={{ width: '100%', maxWidth: '280px', margin: 0 }}>
             Coba Sekarang — Gratis
           </Link>
         </div>
